@@ -149,7 +149,6 @@ def main():
 
               col3, col4 = st.columns(2)
 
-
               with col3:
                   with st.expander("Tokens & Lemmas"):
                       st.write("T&K")
@@ -158,7 +157,7 @@ def main():
                       processed_text_fin = str(nt.TextFrame(processed_text_mid).remove_special_characters())
                       tandl = text_analyzer(processed_text_fin)
                       st.json(tandl)
-
+			  
               with col4:
                   with st.expander("Summarize"):
                       st.success("Summarize")
