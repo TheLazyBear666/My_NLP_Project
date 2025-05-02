@@ -147,6 +147,7 @@ def main():
               st.write("")
               st.info("Advance Features")
 
+		  
               col3, col4 = st.columns(2)
 
               with col3:
@@ -157,8 +158,8 @@ def main():
                       processed_text_fin = str(nt.TextFrame(processed_text_mid).remove_special_characters())
                       tandl = text_analyzer(processed_text_fin)
                       st.json(tandl)
-			  
-              with col4:
+	      
+	      with col4:
                   with st.expander("Summarize"):
                       st.success("Summarize")
                       summary_text = str(nt.TextFrame(raw_text).remove_stopwords())
