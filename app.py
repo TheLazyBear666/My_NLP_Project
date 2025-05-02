@@ -158,16 +158,16 @@ def main():
                       processed_text_fin = str(nt.TextFrame(processed_text_mid).remove_special_characters())
                       tandl = text_analyzer(processed_text_fin)
                       st.json(tandl)
-	      
+					  
 	      with col4:
-                  with st.expander("Summarize"):
+		  with st.expander("Summarize"):
                       st.success("Summarize")
                       summary_text = str(nt.TextFrame(raw_text).remove_stopwords())
                       summary_text = str(nt.TextFrame(summary_text).remove_puncts())
                       summary_text_fin = str(nt.TextFrame(summary_text).remove_special_characters())
                       summary = summarize_text(summary_text_fin)
                       st.success(summary)
-                  
+			  
     if choice == "Translation":
       st.subheader("Translation")
       st.write("")
